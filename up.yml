@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: up
+    apt:
+      name:
+        - "{{ variable }}"
+      state: latest
+      update_cache: yes
