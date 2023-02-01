@@ -4,9 +4,8 @@
   become: true
   tasks:
 
-  - name: up
+  - name: Update all packages to latest version
     apt:
-      name:
-        - "{{ variable }}"
+      name: "*"
       state: latest
       update_cache: yes
